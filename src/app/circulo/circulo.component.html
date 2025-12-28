@@ -1,0 +1,23 @@
+<ion-card>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Círculo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-img [src]="'https://ionicframework.com/docs/img/demos/card-media.png'" alt="Círculo" style="height: 150px;"></ion-img>
+
+  <ion-card-content>
+    <p>El perímetro de un círculo es la longitud de su borde.</p>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-input [(ngModel)]="radio" type="number" label="Radio (cm)" label-placement="floating" fill="solid" placeholder="Ingrese el radio"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="calcular()" class="ion-margin-top">Calcular Perímetro</ion-button>
+    </ion-list>
+
+    <ion-text color="primary" *ngIf="resultado" class="ion-margin-top ion-text-center">
+      <h3>{{ resultado }}</h3>
+    </ion-text>
+  </ion-card-content>
+</ion-card>

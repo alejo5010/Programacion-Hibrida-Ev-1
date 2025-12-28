@@ -1,0 +1,12 @@
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Seleccione Figura</ion-label>
+    <ion-select [(ngModel)]="figuraSeleccionada" placeholder="Seleccione una">
+      <ion-select-option value="circulo">Círculo</ion-select-option>
+      <ion-select-option value="triangulo">Triángulo</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <app-circulo *ngIf="figuraSeleccionada === 'circulo'"></app-circulo>
+  <app-triangulo *ngIf="figuraSeleccionada === 'triangulo'"></app-triangulo>
+</ion-content>

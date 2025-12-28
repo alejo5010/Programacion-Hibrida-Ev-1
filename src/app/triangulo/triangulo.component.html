@@ -1,0 +1,36 @@
+<ion-card>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Triángulo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card-content>
+    <p>Perímetro</p>
+    <p class="ion-padding-bottom">
+      El perímetro de un triángulo es la suma de las longitudes de sus tres lados.
+    </p>
+    
+    <ion-img src="assets/triangulo.png" alt="Fórmula Triángulo"></ion-img>
+
+    <ion-list>
+      <ion-item>
+        <ion-input label="Lado A (cm)" labelPlacement="floating" type="number" [(ngModel)]="ladoA"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Lado B (cm)" labelPlacement="floating" type="number" [(ngModel)]="ladoB"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Lado C (cm)" labelPlacement="floating" type="number" [(ngModel)]="ladoC"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" (click)="calcular()" class="ion-margin-top">
+      CALCULAR EL PERÍMETRO
+    </ion-button>
+
+    <ion-text color="dark" class="ion-margin-top" *ngIf="resultado">
+      <h3>{{ resultado }}</h3>
+    </ion-text>
+  </ion-card-content>
+</ion-card>
